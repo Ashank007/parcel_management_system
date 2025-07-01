@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: parcel-frontend/
+    ports:
+      - "3000:3000"
+    networks:
+      - parcel-management
+    restart: always
+  backend:
+    build:
+      context: flask-backend/
+    ports:
+      - "5000:5000"
+    networks:
+      - parcel-management
+    restart: always
+
+networks:
+  parcel-management:

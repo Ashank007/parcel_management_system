@@ -48,4 +48,4 @@ def delete_parcel(id):
     return jsonify({'message': 'Parcel deleted'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host="0.0.0.0")
